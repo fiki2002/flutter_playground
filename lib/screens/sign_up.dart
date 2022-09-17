@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/screens/login.dart';
 
+import '../widgets/custom_button.dart';
 import '../widgets/custom_textfield.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -11,6 +12,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Text('Sign up page'),
       ),
       body: Column(
@@ -33,7 +35,11 @@ class SignUpPage extends StatelessWidget {
             labelText: 'Confirm Password',
             hintText: 'Input password again',
           ),
-                    const SizedBox(
+          const SizedBox(
+            height: 20,
+          ),
+          const CustomButton(text: 'Sign Up'),
+          const SizedBox(
             height: 10,
           ),
           RichText(
