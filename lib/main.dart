@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/the_stacked_ui.dart';
+import 'package:flutter_playground/screens/login.dart';
 
 void main() => runApp( const MyApp());
 
@@ -8,10 +8,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  const MaterialApp(
       title: 'Flutter Playground',
       debugShowCheckedModeBanner: false,
-      home: TheStackedUi(),
+      home: LoginPage(),
     );
   }
 }

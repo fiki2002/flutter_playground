@@ -1,7 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/screens/sign_up.dart';
 
 import '../widgets/custom_textfield.dart';
-
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -13,14 +14,44 @@ class LoginPage extends StatelessWidget {
         title: const Text('Login Page'),
       ),
       body: Column(
-        children: const [
-          CustomTextField(
+        children: [
+          const CustomTextField(
             labelText: 'Email',
             hintText: 'Please input your Email',
           ),
-            CustomTextField(
+          const SizedBox(
+            height: 10,
+          ),
+          const CustomTextField(
             labelText: 'Password',
             hintText: 'Please input your Password',
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          RichText(
+            text: TextSpan(
+              text: 'New here? ',
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 12,
+              ),
+              children: [
+                TextSpan(
+                  text: 'Create an account',
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontSize: 11,
+                  ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: ((context) => const SignUpPage()),
+                          ),
+                        ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

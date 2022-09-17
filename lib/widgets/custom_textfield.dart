@@ -9,17 +9,19 @@ class CustomTextField extends StatelessWidget {
   }) : super(key: key);
   final String hintText;
   final String labelText;
- final  bool isPassword;
+  final bool isPassword;
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      // if(isPassword == true){obscureText: true,},
-                
-      
-      decoration: InputDecoration(
-        hintText: hintText,
-        labelText: labelText,
-        border: const OutlineInputBorder(),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: TextField(
+        // if(isPassword == true){obscureText: true,},
+
+        decoration: InputDecoration(
+          hintText: hintText,
+          labelText: labelText,
+          border: const OutlineInputBorder(),
+        ),
       ),
     );
   }
