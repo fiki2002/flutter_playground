@@ -6,8 +6,8 @@ class BaseChangeNotifier extends ChangeNotifier {
   StateEnum _loadingState = StateEnum.unknown;
   StateEnum get loadingState => _loadingState;
 
-  void setLoading(StateEnum val) {
-    _loadingState = val;
+  void setLoading() {
+    _loadingState = StateEnum.loading;
     notifyListeners();
   }
 
