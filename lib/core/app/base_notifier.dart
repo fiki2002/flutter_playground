@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../enum/origin.dart';
+import '../../enums/enum_state.dart';
 
 class BaseChangeNotifier extends ChangeNotifier {
   StateEnum _loadingState = StateEnum.unknown;
@@ -11,10 +11,10 @@ class BaseChangeNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  String _loadingType = '';
-  String get loadingType => _loadingType;
-  set loadingType(String value) {
-    _loadingType = value;
-    notifyListeners();
-  }
+  // String _loadingType = '';
+  // String get loadingType => _loadingType;
+  // set loadingType(String value) {
+  //   _loadingType = value;
+  //   notifyListeners();
+  // }
 }

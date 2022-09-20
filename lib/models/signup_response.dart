@@ -16,4 +16,12 @@ class SignUpDataModel {
       'confirmPassword': confirmPassword,
     };
   }
+
+  factory SignUpDataModel.fromMap(Map<String, dynamic> map) {
+    return SignUpDataModel(
+      email: map['email'] as String,
+      password: map['password'] as String,
+      confirmPassword: map['confirmPassword'] as String,
+    );
+  }
 }
