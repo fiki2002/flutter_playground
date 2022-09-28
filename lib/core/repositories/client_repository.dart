@@ -2,14 +2,15 @@ import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:flutter/foundation.dart';
 
+import '../services/api_service.dart';
 import '../services/connection_service.dart';
-
-
 
 class HttpClientService {
   late Dio dio;
+  late ApiClient _apiClient;
 
   HttpClientService() {
+    _apiClient = ApiClient(dio);
     final options = BaseOptions(
       baseUrl: 'https://cryptowatch-server.herokuapp.com',
       receiveDataWhenStatusError: true,
